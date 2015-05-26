@@ -219,11 +219,7 @@ if(isset($_POST["submit"])){
                             </h1>
                             <ol class="breadcrumb">
                                 <li class="active">
-                                    <i class="fa fa-dashboard"></i> Home 
-                                     <li class="active">
-                                <i class="fa fa-edit"></i> Registration </li> 
-                                 <li class="active">
-                                <i class="fa fa-edit"></i> Disease </li> 
+                                    <i class="fa fa-dashboard"></i> Dashboard
                                 </li>
                             </ol>
                         </div>

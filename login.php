@@ -5,7 +5,7 @@ if(isset($_POST['submit'])){
 $userID = $_POST['userID'];
 $password = $_POST['password'];
 // Include database connection settings
-include('config.php');
+include('./config.php');
 
  $a = set_time_limit(25);
 
@@ -31,7 +31,7 @@ if ($login->num_rows == 1)
 			$_SESSION['ic_num'] = $_POST['ic_num'];
 			$_SESSION['position'] = $row['position'];
 			// Jump to adminhome page as Admin
-			header('Location: adminhome.php');
+			header('Location: ./adminhome.php');
 			}
 			else if($row['position']=="nurse")
 			{
@@ -41,7 +41,7 @@ if ($login->num_rows == 1)
 			$_SESSION['ic_num'] = $row['ic_num'];
 			$_SESSION['position'] = $row['position'];
 			// Jump to home page as sttaff
-			header('Location: nursehome.php');
+			header('Location: ./nursehome.php');
 			}
 			else if($row['position']=="chef")
 			{
@@ -51,7 +51,7 @@ if ($login->num_rows == 1)
 			$_SESSION['ic_num'] = $row['ic_num'];
 			$_SESSION['position'] = $row['position'];
 			// Jump to home page as chef
-			header('Location: chefhome.php');
+			header('Location: ./chefhome.php');
 			}
 		}	
 	}
@@ -100,7 +100,7 @@ if (x==null || x=="")
 	
 	<div id="container">
 		
-		<form name="login" method="post" class="signin" action="login.php" onSubmit="return validateForm()">
+		<form name="login" method="post" class="signin" action="./login.php" onSubmit="return validateForm()">
 		<label for="name">Username:</label>
 		
 		<input type="name" name="userID" placeholder="UserID">

@@ -14,7 +14,7 @@ include("config.php");
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Order List</title>
+    <title>Patient List</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -184,14 +184,12 @@ include("config.php");
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Order List
+                            Patient List
                         </h1>
                         
                         <ol class="breadcrumb">
                             <li>
-                               <i class="fa fa-dashboard"></i> Home </li>
-                                <li class="active">
-                                <i class="fa fa-edit"></i> Menu Order </li> 
+                               <i class="fa fa-dashboard"></i> Home / Patient List</a>
                            <div class="container-fluid">
   <h2></h2>
             
@@ -205,28 +203,34 @@ include("config.php");
         <th width="22%">BEVERAGE</th>
            <th width="22%">DESSERT</th>
             <th width="22%">FRUIT</th>
+        
         <th width="27%">PROCESS </th>
       </tr>
     </thead>
-    <?php
-                    $sql = $conn->query("SELECT * FROM order");                 
+     <?php
+    
+                    $sql = $conn->query("SELECT * FROM order o LEFT JOIN disease d ON p.idDisease = d.idDisease ");                 
                     if($sql->num_rows > 0){
                         while($row = $sql->fetch_assoc()){
                             ?>
-                            <tr>
-                                 <td><?php echo $row['patientID']; ?></td>
-                                <td><?php echo $row['foodBreakfast']; ?></td>
-                                <td><?php echo $row['beverageBreakfast']; ?></td>
-                                <td><?php echo $row['dessertBreakfast']; ?></td>
-                                <td>
-                                    <a href="./editmeals.php?id=<?=$row['mealID']?>" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</a>
-                                    <a href="./deletemeals.php?id=<?=$row['mealID']?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</a>
-                                </td>
+      <tr>
+
+         <td><?php echo $row['foodBreakfast']; ?></td>
+          <td><?php echo $row['beverageBreakfast']; ?></td>
+           <td><?php echo $row['dessertBreakfast']; ?></td>
+        <td><?php echo $row['admitDate']; ?></td>
+       <td> <?php echo $row['dischargeDate']; ?></td>
+        <td>
+        <a href="./editpatient.php?id=<?=$row['patientID']?>" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</a>
+                                     <a href="./deletepatientlist.php?id=<?=$row['patientID']?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</a>
+      </tr>
+       
+       </td>
                             </tr>
                             <?php
                         }
                     }else{?>
-                    <tr><td colspan="5">No record</td></tr>
+                    <tr><td colspan="3">No record</td></tr>
                     <?php }
                     ?>
                 </table>

@@ -9,7 +9,7 @@
 // {
 // 	$message='Cannot use application database : ' . mysql_error();
 // }    
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "";
 $dbname = "kitchen";
