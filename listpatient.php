@@ -139,7 +139,7 @@ include("config.php");
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 
                     <?php 
 					//show the username
-					echo strtoupper($_SESSION['name']); 
+					echo ucwords($_SESSION['name']); 
 					?>
                      <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -191,8 +191,7 @@ include("config.php");
                         
                         <ol class="breadcrumb">
                             <li>
-                               <i class="fa fa-dashboard"></i> Home / Patient List</a>
-                           <div class="container-fluid">
+<i class="fa fa-dashboard"></i> Home / Patient List <div class="container-fluid">
   <h2></h2>
             
      <div class="col-lg-12">

@@ -51,7 +51,7 @@ ob_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin</a>
+                <a class="navbar-brand" href="index.php">SB Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -195,7 +195,7 @@ ob_start();
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
-                                <i class="fa fa-dashboard"></i> Dashboard
+                                <i class="fa fa-dashboard"></i> Admin Phase
                             </li>
                         </ol>
                     </div>
@@ -207,7 +207,7 @@ ob_start();
                       <div id="container">
                         <div class="one-third-big-main">
                           <div class="heading_bg">
-                            <h2>Menu Pictures</h2>
+                            
                           </div>
                           </div>
                         <!--sidehost--><!--end sidehost-->
@@ -226,13 +226,13 @@ ob_start();
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">26</div>
-                                        <div>New Comments!</div>
+                                        <div>Register Nurse</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="adminregnurse.php">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left">Registration</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
@@ -248,13 +248,13 @@ ob_start();
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">12</div>
-                                        <div>New Tasks!</div>
+                                        <div>Register Chef</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="adminregchef.php">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left">Registration Chef</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
@@ -270,13 +270,13 @@ ob_start();
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">124</div>
-                                        <div>New Orders!</div>
+                                        <div>Register Ward</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="adminregward.php">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left">Ward</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
@@ -292,13 +292,59 @@ ob_start();
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">13</div>
-                                        <div>Support Tickets!</div>
+                                        <div>Register Disease</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="admindisease.php">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left">Type of Disease</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                      <div class="col-lg-3 col-md-6">
+                      </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-support fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">13</div>
+                                        <div>Pictures</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="adminupload.php">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Upload Pictures</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-support fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">13</div>
+                                        <div>Register Meals</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="adminmeals.php">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Type of Meals</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>

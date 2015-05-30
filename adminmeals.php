@@ -185,7 +185,7 @@ else{
 			<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav side-nav">
-					<li class="active">
+					<li>
 						<a href="adminhome.php"><i class="glyphicon glyphicon-home"></i> Home</a>
 					</li>
 					<li>
@@ -200,7 +200,7 @@ else{
 					<li>
 						<a href="admindiseases.php"><i class="glyphicon glyphicon-pushpin"></i> Diseases</a>
 					</li>
-					<li>
+					<li  class="active">
 						<a href="adminmeals.php"><i class="fa fa-fw fa-cutlery"></i> Meals</a>
 					</li>
 					<li>

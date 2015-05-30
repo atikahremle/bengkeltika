@@ -6,7 +6,7 @@ if(!isset($_SESSION['name'])) {
   header("Location:nursehome.php");
 }
 require 'config.php';
-
+$orderId=$_GET['orderid'];
 if(isset($_POST["submit"])){	
 	$id=$_GET['id'];
 	$sql="SELECT * FROM patient JOIN ward ON patient.ward_no=ward.ward_no WHERE patientID='$id'";
@@ -102,7 +102,7 @@ if(isset($_POST["submit"])){
                 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
                   <?php 
 					//show the username
-                  echo strtoupper($_SESSION['name']); 
+                  echo ucwords($_SESSION['name']); 
                   ?>
                   <b class="caret"></b></a>
                   <ul class="dropdown-menu">
@@ -136,6 +136,7 @@ if(isset($_POST["submit"])){
                             </ol>
                           </div>
                         </div>
+
                         <!-- /.row -->
                         <div class="row">
                           <div class="row">
@@ -147,8 +148,6 @@ if(isset($_POST["submit"])){
                              if($result->num_rows > 0){
                                while($row = $result->fetch_assoc()){
                                 ?>
-                                <form action="./ordermenu.php?id=<?php echo $row['patientID']?>" method="POST" class="form-horizontal">
-
                                   <div class="form-group">
                                     <label for="name" class="col-sm-2 control-label">Name</label>
                                     <div class="col-sm-5">
@@ -168,9 +167,8 @@ if(isset($_POST["submit"])){
                                       <input type="text" class="form-control" id="name" value="<?php echo $_SESSION['name'];?> "size="50" readonly />
                                     </div>
                                   </div>
-      
+
                                   <?php }} ?>
-                                </form>
                                 <div class="col-lg-12">    
                                   <div class="container">
                                     <h2>Order List</h2>
@@ -180,80 +178,89 @@ if(isset($_POST["submit"])){
                                     $result=$conn->query($sql);
                                     if($result->num_rows > 0){
                                       while($row = $result->fetch_assoc()){
-                                    ?>
-                                    <h3>Breakfast</h3>
-                                    <table class="table">
-                                      <tr>
-                                        <td>Food</td>
-                                        <td><p class="text-center">= <?=$row["foodBreakfast"];?></p></td>
-                                      </tr>
-                                      <tr>
-                                        <td>Beverage</td>
-                                        <td>= <?=$row["beverageBreakfast"];?></td>
-                                      </tr>
-                                      <tr>
-                                        <td>Desert</td>
-                                        <td>= <?=$row["dessertBreakfast"];?></td>
-                                      </tr>
-                                      <tr>
-                                        <td>Fruit</td>
-                                        <td>= <?=$row["fruitBreakfast"];?></td>
-                                      </tr>
-                                    </table>
-                                    <h3>Lunch</h3>
-                                    <table class="table">
-                                      <tr>
-                                        <td>Food</td>
-                                        <td><p class="text-center">= <?=$row["foodLunch"];?></p></td>
-                                      </tr>
-                                      <tr>
-                                        <td>Beverage</td>
-                                        <td>= <?=$row["beverageLunch"];?></td>
-                                      </tr>
-                                      <tr>
-                                        <td>Desert</td>
-                                        <td>= <?=$row["dessertLunch"];?></td>
-                                      </tr>
-                                      <tr>
-                                        <td>Fruit</td>
-                                        <td>= <?=$row["fruitLunch"];?></td>
-                                      </tr>
-                                    </table>
-                                    <h3>Dinner</h3>
-                                    <table class="table">
-                                      <tr>
-                                        <td>Food</td>
-                                        <td><p class="text-center">= <?=$row["foodDinner"];?></p></td>
-                                      </tr>
-                                      <tr>
-                                        <td>Beverage</td>
-                                         <div class="col-md-4"><td>= <?=$row["beverageDinner"];?></td></div>
-                                      </tr>
-                                      <tr>
-                                        <td>Desert</td>
-                                        <td>= <?=$row["dessertDinner"];?></td>
-                                      </tr>
-                                      <tr>
-                                        <td>Fruit</td>
-                                        <td>= <?=$row["fruitDinner"];?></td>
-                                      </tr>
-                                    </table>
-                                      <?php
+                                        ?>
+                                        <h3><strong>Breakfast</strong></h3>
+                                        <table class="table">
+                                          <tr>
+                                            <td>Food</td>
+                                            <td>=<?=$row["foodBreakfast"];?></p></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Beverage</td>
+                                            <td>=<?=$row["beverageBreakfast"];?></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Desert</td>
+                                            <td>=<?=$row["dessertBreakfast"];?></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Fruit</td>
+                                            <td>=<?=$row["fruitBreakfast"];?></td>
+                                          </tr>
+                                        </table>
+                                        <h3><strong>Lunch</strong></h3>
+                                        <table class="table">
+                                          <tr>
+                                            <td>Food</td>
+                                            <td>=<?=$row["foodLunch"];?></p></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Beverage</td>
+                                            <td>=<?=$row["beverageLunch"];?></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Desert</td>
+                                            <td>=<?=$row["dessertLunch"];?></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Fruit</td>
+                                            <td>=<?=$row["fruitLunch"];?></td>
+                                          </tr>
+                                        </table>
+                                        <h3><strong>Dinner</strong></h3>
+                                        <table class="table">
+                                          <tr>
+                                            <td>Food</td>
+                                            <td>=<?=$row["foodDinner"];?></p></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Beverage</td>
+                                            <div class="col-md-4"><td>= <?=$row["beverageDinner"];?></td></div>
+                                          </tr>
+                                          <tr>
+                                            <td>Desert</td>
+                                            <td>= <?=$row["dessertDinner"];?></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Fruit</td>
+                                            <td>= <?=$row["fruitDinner"];?></td>
+                                          </tr>
+                                        </table>
+                                        <?php
                                       }}
                                       ?>
-                                  </div>
-                                </div>   
+                                    </div>
+                                  </div> 
+                                  <form action="confirmOrder.php" method="POST">
+                                  <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                      <input type="hidden" name="orderId" value="<?=$orderId;?>">
+                                      <button type="submit" name="submit" value="submit" class="btn btn-success">Yes</button>
+                                      <button type="cancel" name="cancel" value="cancel" class="btn btn-warning">No</button>
+                                    </div>
+                                  </div> 
+                                  </form> 
 
-                                <!-- jQuery -->
-                                <script src="js/jquery.js"></script>
-                                <!-- Bootstrap Core JavaScript -->
-                                <script src="js/bootstrap.min.js"></script>
-                                <script>
-                                  function myFunction() {
-                                    document.getElementById("admitDate").step = "2";
-                                    document.getElementById("demo").innerHTML = "Step was set to '2', meaning that the user can only select every second day in the calendar.";
-                                  }
-                                </script>
-                              </div>
-                            </body>
-                            </html>
+                                  <!-- jQuery -->
+                                  <script src="js/jquery.js"></script>
+                                  <!-- Bootstrap Core JavaScript -->
+                                  <script src="js/bootstrap.min.js"></script>
+                                  <script>
+                                    function myFunction() {
+                                      document.getElementById("admitDate").step = "2";
+                                      document.getElementById("demo").innerHTML = "Step was set to '2', meaning that the user can only select every second day in the calendar.";
+                                    }
+                                  </script>
+                                </div>
+                              </body>
+                              </html>

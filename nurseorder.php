@@ -136,7 +136,7 @@ ob_start();
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 
                     <?php 
 					//show the username
-					echo strtoupper($_SESSION['name']); 
+					echo ucwords($_SESSION['name']); 
 					?>
                      <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -183,7 +183,7 @@ ob_start();
                     <div class="col-lg-12">
                         <h1 class="page-header">Order Menu</h1>
                   <ol class="breadcrumb">
-                            <li>
+                            <li class="active">
                                 <i class="fa fa-dashboard"></i> Home / Order </a>
                             </li>
                            

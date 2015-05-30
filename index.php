@@ -165,7 +165,7 @@ $(document).ready(function() {
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <?php if(!isset($_SESSION['username'])){ echo "<a href='login.php' class='login-window'>LOGIN</a>"; } else echo "<a href='logout.php'>LOGOUT</a>"; ?>
+                    <?php if(!isset($_SESSION['username'])){ echo "<a href='login.php' class='login-window'>Login</a>"; } else echo "<a href='logout.php'>Logout</a>"; ?>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
@@ -236,17 +236,53 @@ $(document).ready(function() {
 							<td width="800" height="350">
     <div id="container">
   
-      <!--  Outer wrapper for presentation only, this can be anything you like -->
-      <div id="banner">
-        <!-- start Basic Jquery Slider -->
-        <ul class="bjqs">
-          <li><center><img src="images/diabetes3.gif" width="480" height="270"></center></li>
-          <li><center><img src="images/image.jpg" width="480" height="270"></center></li>
-          <li><center><img src="images/ff2a2d9b4db419c8ad1cb1bc8124f8f0.jpg" width="480" height="270"></center></li>
-        </ul>
-        <!-- end Basic jQuery Slider -->
-      </div>
-      <!-- End outer wrapper -->
+     <section id="slider"><!--slider-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#slider-carousel" data-slide-to="1"></li>
+                            <li data-target="#slider-carousel" data-slide-to="2"></li>
+                              <li data-target="#slider-carousel" data-slide-to="3"></li>
+                        </ol>
+                        
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                
+                                <div class="col-sm-6">
+                                    <img src="images/operating-room-five-people.jpg" class="image" alt=""; />
+                                  
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-6">        
+                                    <img src="images/diabetes3.gif" class="image" alt="" />
+                            </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-6">
+                                    <img src="images/ff2a2d9b4db419c8ad1cb1bc8124f8f0.jpg" class="image" alt="" /> 
+                        </div>
+                        </div>
+                         <div class="item">
+                                <div class="col-sm-6">
+                                    <img src="images/ff2a2d9b4db419c8ad1cb1bc8124f8f0.jpg" class="image" alt="" /> 
+                        </div>
+                        </div>
+                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section><!--/slider-->
       
     </div>
   
@@ -267,33 +303,7 @@ $(document).ready(function() {
       });
     </script></td>
 		   </tr>
-                <!-- /.row -->
-
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-comments fa-5x"></i>
-                                    </div>
-                                    
-                                    </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6"></div>
-                    <div class="col-lg-3 col-md-6"></div>
-              </div>
-                
-              
+               
              
 
             </div>

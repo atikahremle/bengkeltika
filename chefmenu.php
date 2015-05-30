@@ -30,233 +30,337 @@ include("config.php");
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <![endif]-->
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <div id="wrapper">
+        <div id="wrapper">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">SB Admin</a>
-            </div>
-            <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu message-dropdown">
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading">
-                                            <strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading">
-                                            <strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading">
-                                            <strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-footer">
-                            <a href="#">Read All New Messages</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu alert-dropdown">
-                        <li>
-                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">View All</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 
-                    <?php 
-					//show the username
-					echo strtoupper($_SESSION['name']); 
-					?>
-                     <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                   <li>
-<li>
-                       <a href="chefhome.php"><i class="glyphicon glyphicon-home"></i> Home</a>                    </li>
-<li class="active">
-                        <a href="chefmenu.php"><i class="glyphicon glyphicon-user"></i> Menu Order</a></li>
-
-<li>
-                        <a href="chefreport.php"><i class="fa fa-fw fa-edit"></i>Report</a></li>
-<li>
-                        
-<!-- /.navbar-collapse -->
-        </nav>
-
-        <div id="page-wrapper">
-
-            <div class="container-fluid">
-
-
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Patient List
-                        </h1>
-                        
-                        <ol class="breadcrumb">
-                            <li>
-                               <i class="fa fa-dashboard"></i> Home / Patient List</a>
-                           <div class="container-fluid">
-  <h2></h2>
-            
-     <div class="col-lg-12">
-                    <h2>Patient List </h2> 
-                         
-  <table class="table table-bordered table-hover table-striped">
- 
-      <tr>
-        <th width="31%">FOOD</th>
-        <th width="22%">BEVERAGE</th>
-           <th width="22%">DESSERT</th>
-            <th width="22%">FRUIT</th>
-        
-        <th width="27%">PROCESS </th>
-      </tr>
-    </thead>
-     <?php
-    
-                    $sql = $conn->query("SELECT * FROM order o LEFT JOIN disease d ON p.idDisease = d.idDisease ");                 
-                    if($sql->num_rows > 0){
-                        while($row = $sql->fetch_assoc()){
-                            ?>
-      <tr>
-
-         <td><?php echo $row['foodBreakfast']; ?></td>
-          <td><?php echo $row['beverageBreakfast']; ?></td>
-           <td><?php echo $row['dessertBreakfast']; ?></td>
-        <td><?php echo $row['admitDate']; ?></td>
-       <td> <?php echo $row['dischargeDate']; ?></td>
-        <td>
-        <a href="./editpatient.php?id=<?=$row['patientID']?>" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</a>
-                                     <a href="./deletepatientlist.php?id=<?=$row['patientID']?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</a>
-      </tr>
-       
-       </td>
-                            </tr>
-                            <?php
-                        }
-                    }else{?>
-                    <tr><td colspan="3">No record</td></tr>
-                    <?php }
-                    ?>
-                </table>
-            </div>
-        </div>
-
-                      </ol>
-                    </div>
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">SB Admin</a>
                 </div>
-                <!-- /.row -->
+                <!-- Top Menu Items -->
+                <ul class="nav navbar-right top-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+                        <ul class="dropdown-menu message-dropdown">
+                            <li class="message-preview">
+                                <a href="#">
+                                    <div class="media">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                <strong>John Smith</strong>
+                                            </h5>
+                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="message-preview">
+                                <a href="#">
+                                    <div class="media">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                <strong>John Smith</strong>
+                                            </h5>
+                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="message-preview">
+                                <a href="#">
+                                    <div class="media">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                <strong>John Smith</strong>
+                                            </h5>
+                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="message-footer">
+                                <a href="#">Read All New Messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                        <ul class="dropdown-menu alert-dropdown">
+                            <li>
+                                <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">View All</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 
+                            <?php 
+					//show the username
+                            echo ucwords($_SESSION['name']); 
+                            ?>
+                            <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav side-nav">
+                           <li>
+                            <li>
+                               <a href="chefhome.php"><i class="glyphicon glyphicon-home"></i> Home</a>                    </li>
+                               <li class="active">
+                                <a href="chefmenu.php"><i class="glyphicon glyphicon-user"></i> Menu Order</a></li>
+
+                                <li>
+                                    <a href="chefreport.php"><i class="fa fa-fw fa-edit"></i>Report</a></li>
+                                    <li>
+
+                                        <!-- /.navbar-collapse -->
+                                    </nav>
+
+                                    <div id="page-wrapper">
+
+                                        <div class="container-fluid">
+
+
+                                            <!-- Page Heading -->
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <h1 class="page-header">
+                                                        Order List
+                                                    </h1>
+
+                                                    <ol class="breadcrumb">
+                                                        <li>
+                                                            <i class="fa fa-dashboard"></i> Home / Order List
+                                                       </li>
+                                                   </ol>
+                                               </div>
+                                           </div>
+                                           <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="well">
+                                                    <form action="./chefmenu.php" method="POST" class="form">
+                                                        <h4>Filter : </h4><select name="filterBy">
+                                                        <option value="breakfast">Breakfast</option>
+                                                        <option value="lunch">Lunch</option>
+                                                        <option value="dinner">Dinner</option>
+                                                    </select>
+                                                    <button type="submit">Filter</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <?php
+                                         $date=date('Y-m-d', time());
+                                        if(isset($_POST["filterBy"])){
+                                            switch ($_POST['filterBy']) {
+                                                case 'breakfast':
+                                                $sqlFood="SELECT foodBreakfast food, COUNT(foodBreakfast) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY foodBreakfast";
+                                                $sqlBeverage="SELECT beverageBreakfast beverage, COUNT(beverageBreakfast) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY beverageBreakfast";
+                                                $sqlDessert="SELECT dessertBreakfast dessert, COUNT(dessertBreakfast) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY dessertBreakfast";
+                                                $sqlFruit="SELECT fruitBreakfast fruit, COUNT(fruitBreakfast) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY fruitBreakfast";
+
+                                                break;
+                                                case 'lunch':
+                                                $sqlFood="SELECT foodLunch food, COUNT(foodLunch) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY foodLunch";
+                                                $sqlBeverage="SELECT beverageLunch beverage, COUNT(beverageLunch) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY beverageLunch";
+                                                $sqlDessert="SELECT dessertLunch dessert, COUNT(dessertLunch) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY dessertLunch";
+                                                $sqlFruit="SELECT fruitLunch fruit, COUNT(fruitLunch) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY fruitLunch";
+                                                break;
+                                                case 'dinner':
+                                                $sqlFood="SELECT foodDinner food, COUNT(foodDinner) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY foodDinner";
+                                                $sqlBeverage="SELECT beverageDinner beverage, COUNT(beverageDinner) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY beverageDinner";
+                                                $sqlDessert="SELECT dessertDinner dessert, COUNT(dessertDinner) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY dessertDinner";
+                                                $sqlFruit="SELECT fruitDinner fruit, COUNT(fruitDinner) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY fruitDinner";
+                                                break;
+                                            }
+                                            $resultFood = $conn->query($sqlFood);
+                                            $resultBeverage = $conn->query($sqlBeverage);
+                                            $resultDessert = $conn->query($sqlDessert);
+                                            $resultFruit = $conn->query($sqlFruit);
+                                            ?>
+                                            <div class="col-lg-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Food</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <ul class="list-group">
+                                                            <?php
+                                                            if($resultFood->num_rows > 0){
+                                                                while($row = $resultFood->fetch_assoc()){
+                                                                    ?>
+                                                                    <li class="list-group-item">
+                                                                        <span class="badget"><?=$row["quantity"];?></span>
+                                                                        <?=$row["food"];?>
+                                                                    </li>
+                                                                    <?php
+                                                                }
+                                                            }
+                                                            ?>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Beverge</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <ul class="list-group">
+                                                            <?php
+                                                            if($resultBeverage->num_rows > 0){
+                                                                while($row = $resultBeverage->fetch_assoc()){
+                                                                    ?>
+                                                                    <li class="list-group-item">
+                                                                        <span class="badget"><?=$row["quantity"];?></span>
+                                                                        <?=$row["beverage"];?>
+                                                                    </li>
+                                                                    <?php
+                                                                }
+                                                            }
+                                                            ?>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Dessert</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <ul class="list-group">
+                                                            <?php
+                                                            if($resultDessert->num_rows > 0){
+                                                                while($row = $resultDessert->fetch_assoc()){
+                                                                    ?>
+                                                                    <li class="list-group-item">
+                                                                        <span class="badget"><?=$row["quantity"];?></span>
+                                                                        <?=$row["dessert"];?>
+                                                                    </li>
+                                                                    <?php
+                                                                }
+                                                            }
+                                                            ?>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Fruit</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <ul class="list-group">
+                                                            <?php
+                                                            if($resultFruit->num_rows > 0){
+                                                                while($row = $resultFruit->fetch_assoc()){
+                                                                    ?>
+                                                                    <li class="list-group-item">
+                                                                        <span class="badget"><?=$row["quantity"];?></span>
+                                                                        <?=$row["fruit"];?>
+                                                                    </li>
+                                                                    <?php
+                                                                }
+                                                            }
+                                                            ?>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <?php
+                                            }else{
+                                                ?>
+                                                No record
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
+
+                                </ol>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+
+                </div>
+                <!-- /#page-wrapper -->
 
             </div>
-            <!-- /.container-fluid -->
+            <!-- /#wrapper -->
 
-        </div>
-        <!-- /#page-wrapper -->
+            <!-- jQuery -->
+            <script src="js/jquery.js"></script>
 
-    </div>
-    <!-- /#wrapper -->
+            <!-- Bootstrap Core JavaScript -->
+            <script src="js/bootstrap.min.js"></script>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+        </body>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
-</html>
+        </html>

@@ -18,25 +18,25 @@ if(isset($_POST["submit"])){
      $date=$mysqldate = date( 'Y-m-d', time() );;
      $FoodBF=$_POST["FoodBF"];
      $BeverageBF=$_POST["BeverageBF"];
-     $DessertBF=$_POST["DessertBF"];
+     $DessertBF=$_POST["DesertBF"];
      $FruitBF=$_POST["FruitBF"];
      $FoodL=$_POST["FoodL"];
      $BeverageL=$_POST["BeverageL"];
-     $DessertL=$_POST["DessertL"];
+     $DessertL=$_POST["DesertL"];
      $FruitL=$_POST["FruitL"];
      $FoodD=$_POST["FoodD"];
      $BeverageD=$_POST["BeverageD"];
-     $DessertD=$_POST["DessertD"];
+     $DessertD=$_POST["DesertD"];
      $FruitD=$_POST["FruitD"];
      $patientid=$row['patientID'];
      $confirm="request";
      $userID=$_SESSION["userID"];
      $sql="INSERT INTO `order` (`patientID`,`date`,`foodBreakfast`,`beverageBreakfast`,`dessertBreakfast`,`fruitBreakfast`,`foodLunch`,`beverageLunch`,`dessertLunch`,`fruitLunch`,`foodDinner`, `beverageDinner`,`dessertDinner`,`fruitDinner`,`status`,`userID`) VALUES ($patientid,'$date','$FoodBF','$BeverageBF','$DessertBF','$FruitBF','$FoodL','$BeverageL','$DessertL','$FruitL','$FoodD','$BeverageD','$DessertD','$FruitD','$confirm','$userID');";
-
      $conn->query($sql);
+     $orderId=$conn->insert_id;
      echo $conn->error;
      unset($_POST);
-     header("Location: ./listorder.php?id=".$row['patientID']."&date=".$date);
+     header("Location: ./listorder.php?id=".$row['patientID']."&date=".$date."&orderid=".$orderId);
      die();
    }}}
    ?>
@@ -120,8 +120,8 @@ if(isset($_POST["submit"])){
                 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
                   <?php 
 					//show the username
-                  echo strtoupper($_SESSION['name']); 
-                  ?>
+                  echo ucwords($_SESSION['name']);?> 
+                  
                   <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li> <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a> </li>
@@ -233,6 +233,7 @@ if(isset($_POST["submit"])){
 
                                         <?php getMainFoodL(); ?>
                                         </div>
+
                                         <div class="row">
                                           <h2>Beverage</h2>
                                           <p>The form below contains three inline radio buttons:</p>
@@ -276,13 +277,16 @@ if(isset($_POST["submit"])){
                                                     <h2>Fruits</h2>
                                                     <p>The form below contains three inline radio buttons:</p>
                                                     <?php getFruitD(); ?>
-
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                                    </div>
 
 
                                                     <div class="form-group">
                                                       <div class="col-sm-offset-2 col-sm-10">
-                                                        <button type="submit" name="submit" value="submit" class="btn btn-info">Save</button>
-
+                                                         <button type="cancel" name="cancel" value="cancel" class="btn btn-warning">Cancel</button>
+                                                          <button type="submit" name="submit" value="submit" class="btn btn-primary">Order</button>
                                                       </div>
                                                     </div></div>
                                                   </div>
@@ -310,15 +314,17 @@ if(isset($_POST["submit"])){
                                          $result=$conn->query($sql);
                                          if($result->num_rows > 0){
                                            while($row = $result->fetch_array()){
-                                            echo '<div class="col-sm-6 col-md-4">';
+                                      
+                                           echo '<div class="col-sm-6 col-md-4">';
                                               echo '<div class="thumbnail">';
-                                                echo '<img src="'.$row["path"].'" alt="...">';
+                                                echo '<img src="'.$row["path"].'" alt="..." style="width:230px;height:130px;">';
                                                 echo '<div class="caption">';
                                                   echo '<h3>'.$row['mealName'].'</h3>';
                                                   echo '<p><input type="radio" name="BeverageBF" value="'.$row['mealName'].'"></p>';
                                                 echo '</div>';
                                               echo '</div>';
                                             echo '</div>';
+                                         
                                          }
                                        }
                                      }
@@ -330,7 +336,7 @@ if(isset($_POST["submit"])){
                                          while($row = $result->fetch_array()){
                                             echo '<div class="col-sm-6 col-md-4">';
                                               echo '<div class="thumbnail">';
-                                                echo '<img src="'.$row["path"].'" alt="...">';
+                                                echo '<img src="'.$row["path"].'" alt="..."style="width:230px;height:130px;">';
                                                 echo '<div class="caption">';
                                                   echo '<h3>'.$row['mealName'].'</h3>';
                                                   echo '<p><input type="radio" name="FoodBF" value="'.$row['mealName'].'"></p>';
@@ -348,7 +354,7 @@ if(isset($_POST["submit"])){
                                        while($row = $result->fetch_array()){
                                           echo '<div class="col-sm-6 col-md-4">';
                                               echo '<div class="thumbnail">';
-                                                echo '<img src="'.$row["path"].'" alt="...">';
+                                                echo '<img src="'.$row["path"].'" alt="..."style="width:230px;height:130px;">';
                                                 echo '<div class="caption">';
                                                   echo '<h3>'.$row['mealName'].'</h3>';
                                                   echo '<p><input type="radio" name="DesertBF" value="'.$row['mealName'].'"></p>';
@@ -366,7 +372,7 @@ if(isset($_POST["submit"])){
                                      while($row = $result->fetch_array()){
                                         echo '<div class="col-sm-6 col-md-4">';
                                               echo '<div class="thumbnail">';
-                                                echo '<img src="'.$row["path"].'" alt="...">';
+                                                echo '<img src="'.$row["path"].'" alt="..."style="width:230px;height:130px;">';
                                                 echo '<div class="caption">';
                                                   echo '<h3>'.$row['mealName'].'</h3>';
                                                   echo '<p><input type="radio" name="FruitBF" value="'.$row['mealName'].'"></p>';
@@ -385,7 +391,7 @@ if(isset($_POST["submit"])){
                                    while($row = $result->fetch_array()){
                                       echo '<div class="col-sm-6 col-md-4">';
                                               echo '<div class="thumbnail">';
-                                                echo '<img src="'.$row["path"].'" alt="...">';
+                                                echo '<img src="'.$row["path"].'" alt="..."style="width:230px;height:130px;">';
                                                 echo '<div class="caption">';
                                                   echo '<h3>'.$row['mealName'].'</h3>';
                                                   echo '<p><input type="radio" name="BeverageL" value="'.$row['mealName'].'"></p>';
@@ -403,7 +409,7 @@ if(isset($_POST["submit"])){
                                  while($row = $result->fetch_array()){
                                     echo '<div class="col-sm-6 col-md-4">';
                                               echo '<div class="thumbnail">';
-                                                echo '<img src="'.$row["path"].'" alt="...">';
+                                                echo '<img src="'.$row["path"].'" alt="..."style="width:230px;height:130px;">';
                                                 echo '<div class="caption">';
                                                   echo '<h3>'.$row['mealName'].'</h3>';
                                                   echo '<p><input type="radio" name="FoodL" value="'.$row['mealName'].'"></p>';
@@ -421,7 +427,7 @@ if(isset($_POST["submit"])){
                                while($row = $result->fetch_array()){
                                   echo '<div class="col-sm-6 col-md-4">';
                                               echo '<div class="thumbnail">';
-                                                echo '<img src="'.$row["path"].'" alt="...">';
+                                                echo '<img src="'.$row["path"].'" alt="..."style="width:230px;height:130px;">';
                                                 echo '<div class="caption">';
                                                   echo '<h3>'.$row['mealName'].'</h3>';
                                                   echo '<p><input type="radio" name="DesertL" value="'.$row['mealName'].'"></p>';
@@ -439,7 +445,7 @@ if(isset($_POST["submit"])){
                              while($row = $result->fetch_array()){
                                 echo '<div class="col-sm-6 col-md-4">';
                                               echo '<div class="thumbnail">';
-                                                echo '<img src="'.$row["path"].'" alt="...">';
+                                                echo '<img src="'.$row["path"].'" alt="..."style="width:230px;height:130px;">';
                                                 echo '<div class="caption">';
                                                   echo '<h3>'.$row['mealName'].'</h3>';
                                                   echo '<p><input type="radio" name="FruitL" value="'.$row['mealName'].'"></p>';
@@ -459,7 +465,7 @@ if(isset($_POST["submit"])){
                            while($row = $result->fetch_array()){
                              echo '<div class="col-sm-6 col-md-4">';
                                               echo '<div class="thumbnail">';
-                                                echo '<img src="'.$row["path"].'" alt="...">';
+                                                echo '<img src="'.$row["path"].'" alt="..."style="width:230px;height:130px;">';
                                                 echo '<div class="caption">';
                                                   echo '<h3>'.$row['mealName'].'</h3>';
                                                   echo '<p><input type="radio" name="BeverageD" value="'.$row['mealName'].'"></p>';
@@ -477,7 +483,7 @@ if(isset($_POST["submit"])){
                          while($row = $result->fetch_array()){
                             echo '<div class="col-sm-6 col-md-4">';
                                               echo '<div class="thumbnail">';
-                                                echo '<img src="'.$row["path"].'" alt="...">';
+                                                echo '<img src="'.$row["path"].'" alt="..."style="width:230px;height:130px;">';
                                                 echo '<div class="caption">';
                                                   echo '<h3>'.$row['mealName'].'</h3>';
                                                   echo '<p><input type="radio" name="FoodD" value="'.$row['mealName'].'"></p>';
@@ -495,10 +501,10 @@ if(isset($_POST["submit"])){
                        while($row = $result->fetch_array()){
                          echo '<div class="col-sm-6 col-md-4">';
                                               echo '<div class="thumbnail">';
-                                                echo '<img src="'.$row["path"].'" alt="...">';
+                                                echo '<img src="'.$row["path"].'" alt="..."style="width:230px;height:130px;">';
                                                 echo '<div class="caption">';
                                                   echo '<h3>'.$row['mealName'].'</h3>';
-                                                  echo '<p><input type="radio" name="DessertD" value="'.$row['mealName'].'"></p>';
+                                                  echo '<p><input type="radio" name="DesertD" value="'.$row['mealName'].'"></p>';
                                                 echo '</div>';
                                               echo '</div>';
                                             echo '</div>';
@@ -513,7 +519,7 @@ if(isset($_POST["submit"])){
                      while($row = $result->fetch_array()){
                         echo '<div class="col-sm-6 col-md-4">';
                                               echo '<div class="thumbnail">';
-                                                echo '<img src="'.$row["path"].'" alt="...">';
+                                                echo '<img src="'.$row["path"].'" alt="..."style="width:230px;height:130px;">';
                                                 echo '<div class="caption">';
                                                   echo '<h3>'.$row['mealName'].'</h3>';
                                                   echo '<p><input type="radio" name="FruitD" value="'.$row['mealName'].'"></p>';

@@ -186,7 +186,7 @@ require 'config.php';
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
 					<?php 
 					//show the username
-					echo strtoupper($_SESSION['name']); 
+					echo ucwords($_SESSION['name']);
 					?>
                     <b class="caret"></b></a>
                     <ul class="dropdown-menu">

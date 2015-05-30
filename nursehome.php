@@ -14,7 +14,7 @@ include("config.php");
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>SB Nurse - Bootstrap Nurse Template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -140,7 +140,7 @@ include("config.php");
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  
                     <?php 
 					//show the username
-					echo strtoupper($_SESSION['name']); 
+					echo ucwords($_SESSION['name']); 
 					?>
                      <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -185,19 +185,89 @@ include("config.php");
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Blank Page
-                            <small>Subheading</small>
+                        Homepage
+                          
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                                <i class="fa fa-dashboard"></i>  <a href="index.php">Nurse Phase</a>
                             </li>
                             <li class="active"></li>
                       </ol>
                     </div>
                 </div>
                 <!-- /.row -->
-
+<div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-comments== fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">26</div>
+                                        <div>Register Patient</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="nurseregpatient.php">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Registration</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-tasks fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">12</div>
+                                        <div>List Patient</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="listpatient.php">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Patient List</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-shopping-cart fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">124</div>
+                                        <div>Menu Order</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="nurseorder.php">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Order</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+                <!-- /.row -->
             </div>
             <!-- /.container-fluid -->
 
