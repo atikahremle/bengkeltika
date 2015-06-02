@@ -84,110 +84,18 @@ if($name == ""){
                 </div>
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-right top-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-                        <ul class="dropdown-menu message-dropdown">
-                            <li class="message-preview">
-                                <a href="#">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><strong>John Smith</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="message-preview">
-                                <a href="#">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><strong>John Smith</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="message-preview">
-                                <a href="#">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><strong>John Smith</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="message-footer">
-                                <a href="#">Read All New Messages</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                        <ul class="dropdown-menu alert-dropdown">
-                            <li>
-                                <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#">View All</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
-                           <?php 
-					//show the username
-                           echo ucwords($_SESSION['name']); 
-                           ?>
-                           <b class="caret"></b></a>
-                           <ul class="dropdown-menu">
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo ucwords($_SESSION['name']);?><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                
+                        <li>
+                            <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
@@ -231,15 +139,15 @@ if($name == ""){
                     <form action="./nurseregpatient.php" method="post" name="formID" id="formID" role="form">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Patient Name">
+                            <input type="text" name="name" class="form-control" id="name" required="required" placeholder="Patient Name">
                         </div>
                         <div class="form-group">
                             <label for="ic_num">Ic Number</label>
-                            <input type="text" name="ic_num" class="form-control" id="ic_num" placeholder="XXXXXX-XX-XXXX">
+                            <input type="text" name="ic_num" class="form-control" id="ic_num" required="required" placeholder="XXXXXX-XX-XXXX">
                         </div>
                         <div class="form-group">
                             <label for="room_no">Room Number</label>
-                            <input type="text" name="room_no"  class="form-control" id="room_no" placeholder="Room Number">
+                            <input type="text" name="room_no"  class="form-control" id="room_no" required="required" placeholder="Room Number">
                         </div>
                         <div class="form-group">
                             <label for="ward_no">Ward Number</label>
@@ -271,7 +179,7 @@ if($name == ""){
                                                </div>
        <div class="form-group">
                             <label for="doc_name">Doctor Name</label>
-                            <input type="text"name="doc_name" class="form-control" id="doc_name" placeholder="Doctor Name">
+                            <input type="text"name="doc_name" class="form-control" id="doc_name" required="required" placeholder="Doctor Name">
                         </div>
       <div class="form-group">
                         	<label for="admitDate"> Admit Date</label>

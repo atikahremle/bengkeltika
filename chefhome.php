@@ -14,7 +14,7 @@ include("config.php");
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>SB Chef - Bootstrap ChefTemplate</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -48,111 +48,16 @@ include("config.php");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin</a>
+                <a class="navbar-brand" href="chefhome.php">SB Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
+                
+                
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu message-dropdown">
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading">
-                                            <strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading">
-                                            <strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading">
-                                            <strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-footer">
-                            <a href="#">Read All New Messages</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu alert-dropdown">
-                        <li>
-                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">View All</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
-					  <?php 
-					//show the username
-                           echo strtoupper($_SESSION['name']); 
-                           ?>
-                           <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo ucwords($_SESSION['name']);?><b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
+                
                         <li>
                             <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
@@ -183,17 +88,64 @@ include("config.php");
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Blank Page
-                            <small>Subheading</small>
+                           Chef Homepage
+                            
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                                <i class="fa fa-dashboard"></i>  <a href="chefhome.php">Home</a>
                             </li>
                             <li class="active"></li>
                       </ol>
-                    </div>
-                </div>
+                                              <div class="row">
+                                              <div class="col-lg-3 col-md-6">
+                                              </div>
+                                                <div class="col-lg-3 col-md-6">
+                                                    <div class="panel panel-red">
+                                                        <div class="panel-heading">
+                                                            <div class="row">
+                                                                <div class="col-xs-3">
+                                                                    <i class="fa fa-comments== fa-5x"></i>
+                                                                </div>
+                                                                <div class="col-xs-9 text-right">
+                                                                    <div class="huge">26</div>
+                                                                    <div>Menu Order</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <a href="chefmenu.php">
+                                                            <div class="panel-footer">
+                                                                <span class="pull-left">Menu</span>
+                                                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6">
+                                                    <div class="panel panel-green">
+                                                        <div class="panel-heading">
+                                                            <div class="row">
+                                                                <div class="col-xs-3">
+                                                                    <i class="fa fa-tasks fa-5x"></i>
+                                                                </div>
+                                                                <div class="col-xs-9 text-right">
+                                                                    <div class="huge">12</div>
+                                                                    <div>Report</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <a href="chefreport.php">
+                                                            <div class="panel-footer">
+                                                                <span class="pull-left">Report Order</span>
+                                                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                
                 <!-- /.row -->
 
             </div>

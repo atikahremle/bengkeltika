@@ -73,111 +73,19 @@ if(isset($_POST["submit"])){
                     <a class="navbar-brand" href="index.html">SB Admin</a>
                 </div>
                 <!-- Top Menu Items -->
-                <ul class="nav navbar-right top-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-                        <ul class="dropdown-menu message-dropdown">
-                            <li class="message-preview">
-                                <a href="#">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><strong>John Smith</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="message-preview">
-                                <a href="#">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><strong>John Smith</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="message-preview">
-                                <a href="#">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><strong>John Smith</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="message-footer">
-                                <a href="#">Read All New Messages</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                        <ul class="dropdown-menu alert-dropdown">
-                            <li>
-                                <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                            </li>
-                            <li>
-                                <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#">View All</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
-                           <?php 
-					//show the username
-                         echo ucwords($_SESSION['name']);?> 
-                           
-                           <b class="caret"></b></a>
-                           <ul class="dropdown-menu">
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                 <ul class="nav navbar-right top-nav">
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo ucwords($_SESSION['name']);?><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                
+                        <li>
+                            <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
@@ -281,19 +189,19 @@ if(isset($_POST["submit"])){
                   <div class="form-group">
                       <label for="name" class="col-sm-2 control-label">Disease Name</label>
                       <div class="col-sm-5">
-                          <input type="text" name="dname" class="form-control" id="name" placeholder="Example: Athma">
+                          <input type="text" name="dname" class="form-control" id="name" required="required" placeholder="Example: Athma">
                       </div>
                   </div>
                   <div class="form-group">
                       <label for="severity" class="col-sm-2 control-label">Disease Severity</label>
                       <div class="col-sm-5">
-                          <input type="text" name="dseverity" class="form-control" id="severity" placeholder="Example: A">
+                          <input type="text" name="dseverity" class="form-control" id="severity" required="required" placeholder="Example: A">
                       </div>
                   </div>
                   <div class="form-group">
                       <label for="details" class="col-sm-2 control-label">Disease Details</label>
                       <div class="col-sm-5">
-                            <textarea name="ddetails" class="form-control" id="details" placeholder="Example: This disease..."></textarea>
+                            <textarea name="ddetails" class="form-control" id="details" required="required" placeholder="Example: This disease..."></textarea>
                       </div>
                   </div>
                   <div class="form-group">
@@ -319,6 +227,18 @@ if(isset($_POST["submit"])){
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
+<!--validation site-->
+<script>
+    function validate()
+    {
+      var confirmMessage="Delete Record ?!";
+
+      if(confirm(confirmMessage)==false)
+      {
+          return false;
+      }
+    }
+</script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>

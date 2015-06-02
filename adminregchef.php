@@ -74,105 +74,13 @@ mysqli_close();
                 <a class="navbar-brand" href="index.html">SB Admin</a>
             </div>
             <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
+             <ul class="nav navbar-right top-nav">
+                
+                
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu message-dropdown">
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-footer">
-                            <a href="#">Read All New Messages</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu alert-dropdown">
-                        <li>
-                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">View All</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
-					<?php 
-					//show the username
-					echo ucwords($_SESSION['name']);
-					?>
-                    <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo ucwords($_SESSION['name']);?><b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
+                
                         <li>
                             <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
@@ -241,18 +149,18 @@ mysqli_close();
 
                 <div class="row">
                     <div class="col-lg-6">
-                    <form action="adminregchef.php" method="post" name="formID" id="formID" role="form">
+                    <form action="adminregchef.php" method="post" name="formID" id="formID" required="required" role="form">
                         <div class="form-group">
                             <label for="name">CHEF NAME</label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                            <input type="text" class="form-control" name="name" id="name" required="required" placeholder="Name">
                         </div>
                         <div class="form-group">
                             <label for="username">CHEF ID</label>
-                            <input type="text" class="form-control" name="chefID" id="chefID" placeholder="Chef ID">
+                            <input type="text" class="form-control" name="chefID" id="chefID" required="required" placeholder="Chef ID">
                         </div>
                         <div class="form-group">
                             <label for="no_ic">IC NUMBER</label>
-                            <input type="text" class="form-control" name="ic_num" id="ic_num" placeholder="XXXXXX-XX-XXXX">
+                            <input type="text" class="form-control" name="ic_num" id="ic_num" required="required" placeholder="XXXXXX-XX-XXXX">
                         </div>
                         <input type="submit" class="btn btn-success" name="submit" value="Submit">
                         <button class="btn btn-default">Reset</button>
