@@ -60,7 +60,7 @@ else{
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>SB Admin - Meals</title>
+	<title>e-Menu Admin - Meals</title>
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/sb-admin.css" rel="stylesheet">
@@ -79,7 +79,7 @@ else{
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html">SB Admin</a>
+				<a class="navbar-brand" href="index.php">e-Menu Admin</a>
 			</div>
 			<!-- Top Menu Items -->
 			 <ul class="nav navbar-right top-nav">

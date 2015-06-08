@@ -33,7 +33,7 @@ if(isset($_POST["submit"])){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Diseases</title>
+    <title>e_Menu Admin - Diseases</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -70,7 +70,7 @@ if(isset($_POST["submit"])){
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">SB Admin</a>
+                    <a class="navbar-brand" href="index.php">e-Menu Admin</a>
                 </div>
                 <!-- Top Menu Items -->
                  <ul class="nav navbar-right top-nav">

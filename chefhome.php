@@ -48,7 +48,7 @@ include("config.php");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="chefhome.php">SB Admin</a>
+                <a class="navbar-brand" href="chefhome.php">e-Menu Chef</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">

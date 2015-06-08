@@ -14,7 +14,7 @@ include("config.php");
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Nurse - Bootstrap Nurse Template</title>
+    <title>e-Menu Nurse - Nurse Home</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +48,7 @@ include("config.php");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="nursehome.php">SB Admin</a>
+                <a class="navbar-brand" href="nursehome.php">e-Menu</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">

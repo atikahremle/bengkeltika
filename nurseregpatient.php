@@ -43,7 +43,7 @@ if($name == ""){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Nurse Register Patient</title>
+    <title>e-Menu-Nurse Register Patient</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -80,7 +80,7 @@ if($name == ""){
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php">SB Admin</a>
+                    <a class="navbar-brand" href="nursehome.php">e-Menu</a>
                 </div>
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-right top-nav">

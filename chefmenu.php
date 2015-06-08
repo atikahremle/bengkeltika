@@ -7,6 +7,15 @@ include("config.php");
 <html lang="en">
 
 <head>
+<?php $Timing="Insert timing";
+if (isset($_POST['submit'])){
+$Timing=$_POST['filterBy'];
+
+}
+
+
+
+?>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,7 +57,7 @@ include("config.php");
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="chefmenu.php">SB Admin</a>
+                    <a class="navbar-brand" href="chefhome.php">e-Menu Chef</a>
                 </div>
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-right top-nav">
@@ -104,11 +113,12 @@ include("config.php");
                                                 <div class="well">
                                                     <form action="./chefmenu.php" method="POST" class="form">
                                                         <h4>Filter : </h4><select name="filterBy">
-                                                        <option value="breakfast">Breakfast</option>
-                                                        <option value="lunch">Lunch</option>
-                                                        <option value="dinner">Dinner</option>
+                                                        <option value=<?php echo $Timing;?>><?php echo $Timing;?></option>
+                                                        <option value="Breakfast">Breakfast</option>
+                                                        <option value="Lunch">Lunch</option>
+                                                        <option value="Dinner">Dinner</option>
                                                     </select>
-                                                    <button type="submit">Filter</button>
+                                                    <button type="submit" name="submit" id="submit">Filter</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -117,27 +127,33 @@ include("config.php");
                                         <?php
                                          $date=date('Y-m-d', time());
                                         if(isset($_POST["filterBy"])){
+                                            $Timing1=$_POST['filterBy'];
                                             switch ($_POST['filterBy']) {
-                                                case 'breakfast':
+                                                case 'Breakfast':
                                                 $sqlFood="SELECT foodBreakfast food, COUNT(foodBreakfast) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY foodBreakfast";
                                                 $sqlBeverage="SELECT beverageBreakfast beverage, COUNT(beverageBreakfast) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY beverageBreakfast";
                                                 $sqlDessert="SELECT dessertBreakfast dessert, COUNT(dessertBreakfast) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY dessertBreakfast";
                                                 $sqlFruit="SELECT fruitBreakfast fruit, COUNT(fruitBreakfast) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY fruitBreakfast";
 
                                                 break;
-                                                case 'lunch':
+                                                case 'Lunch':
                                                 $sqlFood="SELECT foodLunch food, COUNT(foodLunch) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY foodLunch";
                                                 $sqlBeverage="SELECT beverageLunch beverage, COUNT(beverageLunch) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY beverageLunch";
                                                 $sqlDessert="SELECT dessertLunch dessert, COUNT(dessertLunch) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY dessertLunch";
                                                 $sqlFruit="SELECT fruitLunch fruit, COUNT(fruitLunch) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY fruitLunch";
                                                 break;
-                                                case 'dinner':
+                                                case 'Dinner':
                                                 $sqlFood="SELECT foodDinner food, COUNT(foodDinner) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY foodDinner";
                                                 $sqlBeverage="SELECT beverageDinner beverage, COUNT(beverageDinner) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY beverageDinner";
                                                 $sqlDessert="SELECT dessertDinner dessert, COUNT(dessertDinner) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY dessertDinner";
                                                 $sqlFruit="SELECT fruitDinner fruit, COUNT(fruitDinner) quantity FROM `order` WHERE status='confirm' AND `date`='$date' GROUP BY fruitDinner";
                                                 break;
+
+                                                default:
+                                                echo"You must choose meal time";
                                             }
+
+                                            if ($Timing1!="Insert"){
                                             $resultFood = $conn->query($sqlFood);
                                             $resultBeverage = $conn->query($sqlBeverage);
                                             $resultDessert = $conn->query($sqlDessert);
@@ -241,7 +257,7 @@ include("config.php");
                                                 ?>
                                                 No record
                                                 <?php
-                                            }
+                                            }}
                                             ?>
                                         </div>
                                     </div>

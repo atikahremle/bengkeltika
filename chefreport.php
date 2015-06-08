@@ -48,7 +48,7 @@ include("config.php");
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="chefmenu.php">SB Admin</a>
+                    <a class="navbar-brand" href="chefhome.php">e-Menu Chef</a>
                 </div>
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-right top-nav">
@@ -67,13 +67,13 @@ include("config.php");
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                     <li>
+                       <li>
                         <li>
-                         <a href="chefhome.php"><i class="glyphicon glyphicon-home"></i> Home</a>                    </li>
-                         <li class="active">
+                           <a href="chefhome.php"><i class="glyphicon glyphicon-home"></i> Home</a>                    </li>
+                           <li>
                             <a href="chefmenu.php"><i class="glyphicon glyphicon-user"></i> Menu Order</a></li>
 
-                            <li>
+                            <li class="active">
                                 <a href="chefreport.php"><i class="fa fa-fw fa-edit"></i>Report</a></li>
                                 <li>
 
@@ -85,41 +85,97 @@ include("config.php");
                                     <div class="container-fluid">
 
 
-                                        <!-- Page Heading -->
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <h1 class="page-header">
-                                                Report
-                                                </h1>
+                                      <!-- Page Heading -->
+                                     <div class="row">
+                                        <div class="col-lg-12">
+                                            <h1 class="page-header">
+                                                Order List
+                                            </h1>
 
-                                                <ol class="breadcrumb">
-                                                    <li>
-                                                        <i class="fa fa-dashboard"></i> Home / Report 
-                                                    </li>
-                                                </ol>
-                                            </div>
+                                            <ol class="breadcrumb">
+                                                <li>
+                                                <i class="fa fa-dashboard"></i> Home / Report <div class="container-fluid">
+                                                    <h2></h2>
+
+                                                    <div class="col-lg-12">
+                                                        <h2>Order List </h2> 
+
+                                                        <table class="table table-bordered table-hover table-striped">
+
+                                                          <tr>
+                                                            <th width="25%">DATE</th>
+                                                            <th width="18%">NAME</th>
+                                                            <th width="15%">FOOD BREAKFAST</th>
+                                                            <th width="15%">BEVERAGE BREAKFAST</th>
+                                                            <th width="18%">DESSERT BREAKFAST</th>
+                                                            <th width="18%">FRUIT BREAKFAST</th>
+                                                            <th width="15%">FOOD LUNCH</th>
+                                                            <th width="15%">BEVERAGE LUNCH</th>
+                                                            <th width="18%">DESSERT LUNCH</th>
+                                                            <th width="18%">FRUIT LUNCH</th> 
+                                                            <th width="15%">FOOD DINNER</th>
+                                                            <th width="15%">BEVERAGE DINNER</th>
+                                                            <th width="18%">DESSERT DINNER</th>
+                                                            <th width="18%">FRUIT DINNER</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <?php
+                                                     $sql = $conn->query("SELECT * FROM `order`");  
+                                                     if($sql->num_rows > 0){
+                                                          while($row = $sql->fetch_assoc()){
+                                                            ?>
+                                                            <tr>
+                                                                <td><?php echo $row['date']; ?></td>
+                                                                <td><?php echo $row['patientID']; ?></td>
+                                                                <td><?php echo $row['foodBreakfast']; ?></td>
+                                                                <td><?php echo $row['beverageBreakfast']; ?></td>
+                                                                <td><?php echo $row['dessertBreakfast']; ?></td>
+                                                                <td> <?php echo $row['fruitBreakfast']; ?></td>
+                                                                <td><?php echo $row['foodLunch']; ?></td>
+                                                                <td><?php echo $row['beverageLunch']; ?></td>
+                                                                <td><?php echo $row['dessertLunch']; ?></td>
+                                                                <td> <?php echo $row['fruitLunch']; ?></td>
+                                                                <td><?php echo $row['foodDinner']; ?></td>
+                                                                <td><?php echo $row['beverageDinner']; ?></td>
+                                                                <td><?php echo $row['dessertDinner']; ?></td>
+                                                                <td> <?php echo $row['fruitDinner']; ?></td>
+                                                                <td>
+
+                                                                </tr>
+
+                                                            </td>
+                                                        </tr>
+                                                        <?php
+                                                    }
+                                                }else{?>
+                                                <tr><td colspan="3">No record</td></tr>
+                                                <?php }
+                                                ?>
+                                            </table>
                                         </div>
-                                        <div class="row">
+                                    </div>
 
-
-                                        </ol>
-                                                                   <!-- /.row -->
-
+                                </ol>
                             </div>
-                            <!-- /.container-fluid -->
-
                         </div>
-                        <!-- /#page-wrapper -->
+                        <!-- /.row -->
 
                     </div>
-                    <!-- /#wrapper -->
+                    <!-- /.container-fluid -->
 
-                    <!-- jQuery -->
-                    <script src="js/jquery.js"></script>
+                </div>
+                <!-- /#page-wrapper -->
 
-                    <!-- Bootstrap Core JavaScript -->
-                    <script src="js/bootstrap.min.js"></script>
+            </div>
+            <!-- /#wrapper -->
 
-                </body>
+            <!-- jQuery -->
+            <script src="js/jquery.js"></script>
 
-                </html>
+            <!-- Bootstrap Core JavaScript -->
+            <script src="js/bootstrap.min.js"></script>
+
+        </body>
+
+        </html>
