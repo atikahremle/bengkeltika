@@ -7,6 +7,7 @@ if(!isset($_SESSION['name'])) {
 }
 require 'config.php';
 $orderId=$_GET['orderid'];
+
 if(isset($_POST["submit"])){	
 	$id=$_GET['id'];
 	$sql="SELECT * FROM patient JOIN ward ON patient.ward_no=ward.ward_no WHERE patientID='$id'";
@@ -120,6 +121,7 @@ if(isset($_POST["submit"])){
                               <div class="col-sm-5">
                                 <input type="hidden" name="userID" value="<?php echo $_SESSION['userID'];?>"/>
                                 <input type="text" class="form-control" id="name" value="<?php echo $_SESSION['name'];?> "size="50" readonly />
+                              
                               </div>
                             </div>
 
@@ -201,7 +203,14 @@ if(isset($_POST["submit"])){
                                   <div class="col-sm-offset-2 col-sm-10">
                                     <input type="hidden" name="orderId" value="<?=$orderId;?>">
                                     <button type="submit" name="submit" value="submit" class="btn btn-success">Yes</button>
-                                   <a href="./deleteorder.php?id=orderID" class="btn btn-warning">No</a>
+                                   <?php echo" <a class='btn btn-warning' href=./deleteorder.php?id=$orderId>No</a>"?>
+                                  
+
+
+
+                                   
+   
+
                                   </div>
                                 </div> 
                               </form> 

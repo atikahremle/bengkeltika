@@ -1,16 +1,11 @@
 <?php
 include "./config.php";
-if(isset($_GET)){
 	$id=$_GET['id'];
-	$sql="DELETE FROM order WHERE orderID='$id'";
-	if($conn->query($sql)){
-		header("Location: ./nurseorder.php");
-    	die();
-	}else{
-		$conn->connect_error;
-		header("Location: ./nurseorder.php");
-	}
-}else{
-	header("Location: ./nurseorder.php");
-}
+	$sql="DELETE FROM `order` WHERE `orderID`='$id'";
+	$conn->query($sql);
+echo("<SCRIPT language='javascript'> 
+				window.alert('Your order has been delete');
+				window.location='./nurseorder.php'; 
+			  </SCRIPT>");
+
 ?>

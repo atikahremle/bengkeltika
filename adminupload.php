@@ -48,6 +48,10 @@ require 'config.php';
 	// Delete all data into table
 	 $sql="DELETE FROM upload WHERE id='" .$_GET['id']. "'";
 	 $conn->query($sql);
+        echo("<SCRIPT language='javascript'> 
+                window.alert('Picture has been deleted!');
+                window.location='./adminupload.php'; 
+              </SCRIPT>");
 	}		
 	?>
 <!DOCTYPE html>

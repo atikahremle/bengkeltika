@@ -106,7 +106,7 @@ include("config.php");
  
       <tr>
         <th width="25%">NAME</th>
-           <th width="18%">TYPE OF DISEASE</th>
+         
            <th width="15%">ROOM NUMBER</th>
            <th width="15%">WARD NUMBER</th>
               <th width="18%">ADMIT DATE</th>
@@ -122,7 +122,7 @@ include("config.php");
                             ?>
       <tr>
         <td><?php echo $row['name']; ?></td>
-         <td><?php echo $row['dName']; ?></td>
+         
           <td><?php echo $row['room_no']; ?></td>
            <td><?php echo $row['ward_no']; ?></td>
         <td><?php echo $row['admitDate']; ?></td>
