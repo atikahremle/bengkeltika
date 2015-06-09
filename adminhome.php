@@ -135,10 +135,9 @@ ob_start();
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-comments== fa-5x"></i>
+                                        <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">26</div>
                                         <div>Register Nurse</div>
                                     </div>
                                 </div>
@@ -157,10 +156,9 @@ ob_start();
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-tasks fa-5x"></i>
+                                        <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
                                         <div>Register Chef</div>
                                     </div>
                                 </div>
@@ -179,10 +177,9 @@ ob_start();
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-shopping-cart fa-5x"></i>
+                                        <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">124</div>
                                         <div>Register Ward</div>
                                     </div>
                                 </div>
@@ -204,7 +201,6 @@ ob_start();
                                         <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">13</div>
                                         <div>Register Disease</div>
                                     </div>
                                 </div>
@@ -228,7 +224,7 @@ ob_start();
                                         <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">13</div>
+                                        
                                         <div>Pictures</div>
                                     </div>
                                 </div>
@@ -250,7 +246,6 @@ ob_start();
                                         <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">13</div>
                                         <div>Register Meals</div>
                                     </div>
                                 </div>

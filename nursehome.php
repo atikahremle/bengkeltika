@@ -48,7 +48,7 @@ include("config.php");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="nursehome.php">e-Menu</a>
+                <a class="navbar-brand" href="nursehome.php">e-Menu Nurse</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -107,10 +107,9 @@ include("config.php");
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-comments== fa-5x"></i>
+                                        <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">26</div>
                                         <div>Register Patient</div>
                                     </div>
                                 </div>
@@ -129,10 +128,9 @@ include("config.php");
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-tasks fa-5x"></i>
+                                        <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
                                         <div>List Patient</div>
                                     </div>
                                 </div>
@@ -151,10 +149,9 @@ include("config.php");
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-shopping-cart fa-5x"></i>
+                                        <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">124</div>
                                         <div>Menu Order</div>
                                     </div>
                                 </div>

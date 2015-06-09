@@ -48,7 +48,7 @@ ob_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="nursehome.php">e-Menu </a>
+                <a class="navbar-brand" href="nursehome.php">e-Menu Nurse </a>
             </div>
             <!-- Top Menu Items -->
              <ul class="nav navbar-right top-nav">
