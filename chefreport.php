@@ -71,11 +71,13 @@ include("config.php");
                         <li>
                            <a href="chefhome.php"><i class="glyphicon glyphicon-home"></i> Home</a>                    </li>
                            <li>
-                            <a href="chefmenu.php"><i class="glyphicon glyphicon-user"></i> Menu Order</a></li>
+                            <a href="chefmenu.php"><i class="glyphicon glyphicon-th-list"></i> Menu Order</a></li>
 
                             <li class="active">
                                 <a href="chefreport.php"><i class="fa fa-fw fa-edit"></i>Report</a></li>
                                 <li>
+<li>
+                            <a href="chefgraph.php"><i class="glyphicon glyphicon-signal"></i> Report Graph</a></li>
 
                                     <!-- /.navbar-collapse -->
                                 </nav>

@@ -205,7 +205,7 @@ ob_start();
                                     </div>
                                 </div>
                             </div>
-                            <a href="admindisease.php">
+                            <a href="admindiseases.php">
                                 <div class="panel-footer">
                                     <span class="pull-left">Type of Disease</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

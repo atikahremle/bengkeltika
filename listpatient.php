@@ -48,7 +48,7 @@ include("config.php");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="nursehome.php">e-Menu </a>
+                <a class="navbar-brand" href="nursehome.php">e-Menu Nurse </a>
             </div>
             <!-- Top Menu Items -->
              <ul class="nav navbar-right top-nav">
@@ -69,7 +69,7 @@ include("config.php");
                 <ul class="nav navbar-nav side-nav">
                    <li>
                    
-                       <a href="nursehome.php"><i class="fa fa-fw fa-dashboard"></i> Home</a>                    </li>
+                       <a href="nursehome.php"><i class="glyphicon glyphicon-home"></i> Home</a>                    </li>
                     <li>
                         <a href="nurseregpatient.php"><i class="glyphicon glyphicon-user"></i> Register Patient</a></li>
 <li>
@@ -129,7 +129,7 @@ include("config.php");
        <td> <?php echo $row['dischargeDate']; ?></td>
         <td>
         <a href="./editpatient.php?id=<?=$row['patientID']?>" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</a>
-                                     <a href="./deletepatientlist.php?id=<?=$row['patientID']?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</a>
+                                    
       </tr>
        
        </td>

@@ -14,7 +14,7 @@ include("config.php");
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Chef - Bootstrap ChefTemplate</title>
+    <title>SB Chef - Bootstrap Chef Template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -71,12 +71,14 @@ include("config.php");
 <li class="active">
                        <a href="chefhome.php"><i class="glyphicon glyphicon-home"></i> Home</a>                    </li>
 <li>
-                        <a href="chefmenu.php"><i class="glyphicon glyphicon-user"></i> Menu Order</a></li>
+                        <a href="chefmenu.php"><i class="glyphicon glyphicon-th-list"></i> Menu Order</a></li>
 
 <li>
                         <a href="chefreport.php"><i class="fa fa-fw fa-edit"></i>Report</a></li>
 <li>
-                        
+  <a href="chefgraph.php"><i class=" glyphicon glyphicon-signal"></i>Report Graph</a></li>
+<li>
+                         
 <!-- /.navbar-collapse -->
 </nav>
 

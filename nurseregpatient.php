@@ -215,7 +215,7 @@ if($name == ""){
         <td><?php echo $row ['dischargeDate']; ?></td>
         <td>
         <a href="./editpatient.php?id=<?=$row['patientID']?>" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</a>
-                                     <a href="./deletepatient.php?id=<?=$row['patientID']?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</a>
+                                   
       </tr>
        
        </td>

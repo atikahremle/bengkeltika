@@ -48,7 +48,7 @@ ob_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="nursehome.php">e-Menu Nurse </a>
+                <a class="navbar-brand" href="nursehome.php">e-Menu Nurse</a>
             </div>
             <!-- Top Menu Items -->
              <ul class="nav navbar-right top-nav">
@@ -113,28 +113,27 @@ ob_start();
   </p>
 </form>
 <?php if(isset($_POST['submit']))
-	{
-		if(empty($_POST['name'])){
-		echo "<center>Please Insert Name Again</center>";}
-	else {
-		if(isset($_POST['name'])&& !empty($_POST['name']))
-	{
-
-	require 'config.php';	
-	$name = $_POST['name'];
+    {
+        if(empty($_POST['name'])){
+        echo "<center>Please Insert Name Again</center>";}
+    else {
+        if(isset($_POST['name'])&& !empty($_POST['name']))
+    {
+    require 'config.php';   
+    $name = $_POST['name'];
     $query="SELECT * FROM patient JOIN disease ON patient.idDisease=disease.idDisease WHERE name LIKE '%" . $name . "%'";
-	$sql = $conn->query($query); ?>
-	<?php if(!$sql)
-  	{
- 	 echo "<center>No Record</center>";
- 	 }
-  	 ?>
-	<table align="center" border="0" >
-	<tr>
-  	<td width="900">
+    $sql = $conn->query($query); ?>
+    <?php if(!$sql)
+    {
+     echo "<center>No Record</center>";
+     }
+     ?>
+    <table align="center" border="0" >
+    <tr>
+    <td width="900">
     <?php while($row = $sql->fetch_assoc()){
-		$patientID = $row['patientID'];
-		?>                               
+        $patientID = $row['patientID'];
+        ?>                               
        <?php if($sql ==true){?> 
        
    

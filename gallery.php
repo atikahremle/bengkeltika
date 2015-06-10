@@ -80,7 +80,7 @@ $(document).ready(function() {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">e-Menu</a>
+                <a class="navbar-brand" href="index.php">e-Menu Order System</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
