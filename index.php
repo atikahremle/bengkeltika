@@ -129,24 +129,15 @@ $(document).ready(function() {
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Hospital Pantai Ayer Keroh <small>Review</small>
+                           e-Menu Order System
                         </h1>
-                        <ol class="breadcrumb">
-                            <li class="active">
-                                <i class="fa fa-dashboard"></i> Home
-                            </li>
-                        </ol>
+                        
                     </div>
                 </div>
                 <!-- /.row -->
 <tr>
-                <div class="row">
-                    <div class="col-lg-12">
-                      <div class="alert alert-info alert-dismissable">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <div class="row">
-							<td width="800" height="350">
-    <div id="container">
+                
+ 
   
     <section id="slider"><!--slider-->
         <div class="container">
@@ -162,10 +153,10 @@ $(document).ready(function() {
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="./images/banner1.jpg" alt="...">
+                            <img src="./images/banner2.jpg" alt="...">
                         </div>
                         <div class="item">
-                            <img src="./images/banner2.jpg" alt="...">
+                            <img src="./images/banner3.jpg" alt="...">
                         </div>
                     </div>
 
@@ -184,7 +175,7 @@ $(document).ready(function() {
     </section><!--/slider-->
     
       
-    </div>
+   
   
     <!-- Load jQuery and the plug-in -->
     <script src="javascript/libs/jquery-1.6.2.min.js"></script>
