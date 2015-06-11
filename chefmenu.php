@@ -131,6 +131,7 @@ $Timing=$_POST['filterBy'];
                                     </div>
                                     <div class="row">
                                         <?php
+                                        date_default_timezone_set("Asia/Kuala_Lumpur");
                                          $date=date('Y-m-d', time());
                                         if(isset($_POST["filterBy"])){
                                             $Timing1=$_POST['filterBy'];
